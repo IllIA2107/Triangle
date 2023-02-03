@@ -3,9 +3,19 @@ package Triangle;
 import java.text.DecimalFormat;
 
 public class Output {
-    public static void trig(double sin[],double cos[], double tan[],double csc[],double sec[],double cot[], double rad[], double degree[]){
+
+    public static void calc(double sides[]){
+        DecimalFormat form = new DecimalFormat("0.###");
+        System.out.println("\n--------------------------------------------");
+        System.out.println("Classification by Side:           " + Calculate.classificationBySides(sides));
+        System.out.println("Classification by Angle:          " + Calculate.classificationByAngle(sides));
+        System.out.println("Area:                             " + form.format(Calculate.area(sides)));
+        System.out.println("Radius of Inscribed Circle:       " + form.format(Calculate.inscribedRadius(sides)));
+        System.out.println("Radius of Circumscribed Circle:   " + form.format(Calculate.circumscribeRadius(sides)));
+    }
+    public static void trig(double sin[],double cos[], double tan[],double csc[],double sec[],double cot[], double rad[], double degree[], double median[]){
         char side[] = {'A','B','C'};
-        DecimalFormat form = new DecimalFormat("#0.000");
+        DecimalFormat form = new DecimalFormat("0.000");
         System.out.println("--------------------------------------------");
         for(int k = 0; k < 3; k++){
             System.out.println("\n------------------------");
@@ -18,6 +28,7 @@ public class Output {
             System.out.println("csc:           " + form.format(csc[k]));
             System.out.println("sec:           " + form.format(sec[k]));
             System.out.println("cot:           " + form.format(cot[k]));
+            System.out.println("median:        " + form.format(median[k]));
             System.out.println("------------------------");
         }
 

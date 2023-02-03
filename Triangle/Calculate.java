@@ -54,11 +54,24 @@ public class Calculate {
         double radius = area(sides) / s;
         return radius;
     }
+    public static double[] median(double[] sides){
+
+        double median[] = new double[3];
+        median[0] = Math.sqrt((2*sides[1]*sides[1] + 2*sides[2]*sides[2] - sides[0]*sides[0]) / 4);
+        median[1] = Math.sqrt((2*sides[0]*sides[0] + 2*sides[1]*sides[1] - sides[1]*sides[1]) / 4);
+        median[2] = Math.sqrt((2*sides[0]*sides[0] + 2*sides[1]*sides[1] - sides[2]*sides[2]) / 4);
+
+        return median;
+    }
+    public static double[] hight(double[] sides) {
+
+        return hight[];
+    }
 
     public static boolean condition(double sides[]){
         sides = sort(sides);
         System.out.println();
-        if(sides[0] + sides[1] <= sides[2]) {
+        if(sides[0] + sides[1] > sides[2]) {
             return true;
         }
         else{

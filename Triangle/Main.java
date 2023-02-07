@@ -8,10 +8,10 @@ public class Main {
     public static void main(String args[]){
 
         while(1 == 1) {
-            sides[0] = Input.inputSides(0);
-            sides[1] = Input.inputSides(1);
-            sides[2] = Input.inputSides(2);
 
+            for(int k = 0; k < 3; k++){
+                sides[k] = Input.inputSides(k);
+            }
             if (Calculate.condition(sides)) {
 
                 Output.calc(sides);

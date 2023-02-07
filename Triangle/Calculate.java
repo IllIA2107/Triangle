@@ -63,10 +63,10 @@ public class Calculate {
 
         return median;
     }
-    public static double[] hight(double[] sides) {
+    //public static double[] hight(double[] sides) {
 
-        return hight[];
-    }
+      //  return hight[];
+    //}
 
     public static boolean condition(double sides[]){
         sides = sort(sides);

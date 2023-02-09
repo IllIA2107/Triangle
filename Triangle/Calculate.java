@@ -33,17 +33,16 @@ public class Calculate {
         return area;
     }
     public static double[] sort(double list[]){
-        double sides[] = {list[0],list[1],list[2]};
         for(int p = 1; p < 3; p++){
             for(int q = 0; q < 2; q++){
-                if(sides[q] > sides[q + 1]){
-                    double temp = sides[q];
-                    sides[q] = sides[q + 1];
-                    sides[q + 1] = temp;
+                if(list[q] > list[q + 1]){
+                    double temp = list[q];
+                    list[q] = list[q + 1];
+                    list[q + 1] = temp;
                 }
             }
         }
-        return sides;
+        return list;
     }
     public static double circumscribeRadius(double sides[]){
         double radius = (sides[0] * sides[1] * sides[2]) / (4 * area(sides));
@@ -63,10 +62,6 @@ public class Calculate {
 
         return median;
     }
-    //public static double[] hight(double[] sides) {
-
-      //  return hight[];
-    //}
 
     public static boolean condition(double sides[]){
         sides = sort(sides);
@@ -78,5 +73,12 @@ public class Calculate {
             return false;
         }
     }
+
+    //public static double[] hight(double[] sides) {
+
+      //  return hight[];
+    //}
+
+
 
 }

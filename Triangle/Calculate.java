@@ -32,8 +32,8 @@ public class Calculate {
         return Math.sqrt(s * (s - sides[0]) * (s - sides[1]) * (s - sides[2]));
     }
     public static void sort(double[] list){
-        for(int p = 1; p < 3; p++){
-            for(int q = 0; q < 2; q++){
+        for(int p = 1; p < list.length; p++){
+            for(int q = 0; q < list.length-p; q++){
                 if(list[q] > list[q + 1]){
                     double temp = list[q];
                     list[q] = list[q + 1];

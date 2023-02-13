@@ -4,7 +4,7 @@ import java.text.DecimalFormat;
 
 public class Output {
 
-    public static void calc(double sides[]){
+    public static void calc(double[] sides){
         DecimalFormat form = new DecimalFormat("0.###");
         System.out.println("\n--------------------------------------------");
         System.out.println("Classification by Side:           " + Calculate.classificationBySides(sides));
@@ -13,8 +13,8 @@ public class Output {
         System.out.println("Radius of Inscribed Circle:       " + form.format(Calculate.inscribedRadius(sides)));
         System.out.println("Radius of Circumscribed Circle:   " + form.format(Calculate.circumscribeRadius(sides)));
     }
-    public static void trig(double sin[],double cos[], double tan[],double csc[],double sec[],double cot[], double rad[], double degree[], double median[]){
-        char side[] = {'A','B','C'};
+    public static void trig(double[] sin, double[] cos, double[] tan, double[] csc, double[] sec, double[] cot, double[] rad, double[] degree, double[] median){
+        char[] side = {'A','B','C'};
         DecimalFormat form = new DecimalFormat("0.000");
         System.out.println("--------------------------------------------");
         for(int k = 0; k < 3; k++){

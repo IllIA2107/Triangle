@@ -1,7 +1,5 @@
 package Triangle;
 
-import static java.lang.Math.max;
-
 public class Calculate {
     public static String classificationBySides(double[] sides){
         String[] sideClass = {"Equilateral", "Isosceles","Scalene"};
@@ -64,12 +62,4 @@ public class Calculate {
         System.out.println();
         return sides[0] + sides[1] > sides[2];
     }
-
-    //public static double[] hight(double[] sides) {
-
-      //  return hight[];
-    //}
-
-
-
 }
